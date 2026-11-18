@@ -1,0 +1,2042 @@
+{
+  "cases": [
+    {
+      "case_id": "A_local_shortest_dead_end",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        },
+        {
+          "id": "b3"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b3",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        }
+      ],
+      "trusted_sources": [
+        {
+          "repo": "ci/L",
+          "commit": "c1",
+          "digest": "1ed4840a01ee3b4cc2ea4f87383c7e96011d249999fea47d28fceca96ae4513a"
+        }
+      ],
+      "declarations": [
+        {
+          "id": "d1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-d1",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "px"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "d2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b2",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-d2",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "px"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "d3",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b3",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-d3",
+          "dependencies": [
+            {
+              "digest": "536c4c1ac011d97da0a5724c36601b6bb3a58de30d262f89f21896271eab575e",
+              "dep_summary": "py"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x1",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b1",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x1",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x2",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b2",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x2",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "y1",
+          "artifact_digest": "536c4c1ac011d97da0a5724c36601b6bb3a58de30d262f89f21896271eab575e",
+          "builder": "b3",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/Y",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-Y-y1",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "l1",
+          "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+          "builder": "b3",
+          "issued_at": 80,
+          "source": {
+            "repo": "ci/L",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-L-l1",
+          "dependencies": [],
+          "signature_valid": true
+        }
+      ],
+      "revocations": [],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 10000,
+        "cutoff_sequence": null
+      }
+    },
+    {
+      "case_id": "A2_local_shortest_dead_end_two_layer",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        },
+        {
+          "id": "b4"
+        },
+        {
+          "id": "bk"
+        },
+        {
+          "id": "b9"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b4",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "bk",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b9",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        }
+      ],
+      "trusted_sources": [
+        {
+          "repo": "ci/L",
+          "commit": "c1",
+          "digest": "1ed4840a01ee3b4cc2ea4f87383c7e96011d249999fea47d28fceca96ae4513a"
+        }
+      ],
+      "declarations": [
+        {
+          "id": "d1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-d1",
+          "dependencies": [
+            {
+              "digest": "22b616e09571770ca929036b2b9d60fd3df477d8648de764230e0ee6e048ed44",
+              "dep_summary": "pk"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "d2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b2",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-d2",
+          "dependencies": [
+            {
+              "digest": "22b616e09571770ca929036b2b9d60fd3df477d8648de764230e0ee6e048ed44",
+              "dep_summary": "pk"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "d3",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b4",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-d3",
+          "dependencies": [
+            {
+              "digest": "536c4c1ac011d97da0a5724c36601b6bb3a58de30d262f89f21896271eab575e",
+              "dep_summary": "py"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "k1",
+          "artifact_digest": "22b616e09571770ca929036b2b9d60fd3df477d8648de764230e0ee6e048ed44",
+          "builder": "bk",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/K",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-K-k1",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "y1",
+          "artifact_digest": "536c4c1ac011d97da0a5724c36601b6bb3a58de30d262f89f21896271eab575e",
+          "builder": "b4",
+          "issued_at": 85,
+          "source": {
+            "repo": "ci/Y",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-Y-y1",
+          "dependencies": [
+            {
+              "digest": "f249a391cc0a9bbc1d2260291546a50d24e4befbd8f9606f5d1993ed3c47f806",
+              "dep_summary": "pz"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "z1",
+          "artifact_digest": "f249a391cc0a9bbc1d2260291546a50d24e4befbd8f9606f5d1993ed3c47f806",
+          "builder": "b4",
+          "issued_at": 82,
+          "source": {
+            "repo": "ci/Z",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-Z-z1",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "l1",
+          "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+          "builder": "b9",
+          "issued_at": 80,
+          "source": {
+            "repo": "ci/L",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-L-l1",
+          "dependencies": [],
+          "signature_valid": true
+        }
+      ],
+      "revocations": [],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 10000,
+        "cutoff_sequence": null
+      }
+    },
+    {
+      "case_id": "B_bypass_breaks_cycle",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        },
+        {
+          "id": "b3"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b3",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        }
+      ],
+      "trusted_sources": [
+        {
+          "repo": "ci/A",
+          "commit": "c1",
+          "digest": "9bdfbc3a14bf6152e53746f3dc677fcef8cf7a9897983d558270734efc075d3e"
+        }
+      ],
+      "declarations": [
+        {
+          "id": "r1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r1",
+          "dependencies": [
+            {
+              "digest": "cfa0fd97d384a6eedca49ba995e0611463bfdb3f0ed7007cc8ea41ebbba8cab0",
+              "dep_summary": "pa"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "r2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b2",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r2",
+          "dependencies": [
+            {
+              "digest": "cfa0fd97d384a6eedca49ba995e0611463bfdb3f0ed7007cc8ea41ebbba8cab0",
+              "dep_summary": "pa"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "a1",
+          "artifact_digest": "cfa0fd97d384a6eedca49ba995e0611463bfdb3f0ed7007cc8ea41ebbba8cab0",
+          "builder": "b1",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/A",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-A-a1",
+          "dependencies": [
+            {
+              "digest": "f114dbff3f8ab5da4d52797c5ff55586dbfb54e0f5d2d7cf449a79a57952d264",
+              "dep_summary": "pb"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "a2",
+          "artifact_digest": "cfa0fd97d384a6eedca49ba995e0611463bfdb3f0ed7007cc8ea41ebbba8cab0",
+          "builder": "b3",
+          "issued_at": 80,
+          "source": {
+            "repo": "ci/A",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-A-a2",
+          "dependencies": [],
+          "signature_valid": true
+        },
+        {
+          "id": "bb1",
+          "artifact_digest": "f114dbff3f8ab5da4d52797c5ff55586dbfb54e0f5d2d7cf449a79a57952d264",
+          "builder": "b2",
+          "issued_at": 85,
+          "source": {
+            "repo": "ci/B",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-B-bb1",
+          "dependencies": [
+            {
+              "digest": "cfa0fd97d384a6eedca49ba995e0611463bfdb3f0ed7007cc8ea41ebbba8cab0",
+              "dep_summary": "pa"
+            }
+          ],
+          "signature_valid": true
+        }
+      ],
+      "revocations": [],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 10000,
+        "cutoff_sequence": null
+      }
+    },
+    {
+      "case_id": "B2_pure_cycle_no_complete_proof",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        }
+      ],
+      "trusted_sources": [],
+      "declarations": [
+        {
+          "id": "r1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r1",
+          "dependencies": [
+            {
+              "digest": "cfa0fd97d384a6eedca49ba995e0611463bfdb3f0ed7007cc8ea41ebbba8cab0",
+              "dep_summary": "pa"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "a1",
+          "artifact_digest": "cfa0fd97d384a6eedca49ba995e0611463bfdb3f0ed7007cc8ea41ebbba8cab0",
+          "builder": "b1",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/A",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-A-a1",
+          "dependencies": [
+            {
+              "digest": "f114dbff3f8ab5da4d52797c5ff55586dbfb54e0f5d2d7cf449a79a57952d264",
+              "dep_summary": "pb"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "bb1",
+          "artifact_digest": "f114dbff3f8ab5da4d52797c5ff55586dbfb54e0f5d2d7cf449a79a57952d264",
+          "builder": "b2",
+          "issued_at": 85,
+          "source": {
+            "repo": "ci/B",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-B-bb1",
+          "dependencies": [
+            {
+              "digest": "cfa0fd97d384a6eedca49ba995e0611463bfdb3f0ed7007cc8ea41ebbba8cab0",
+              "dep_summary": "pa"
+            }
+          ],
+          "signature_valid": true
+        }
+      ],
+      "revocations": [],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 10000,
+        "cutoff_sequence": null
+      }
+    },
+    {
+      "case_id": "C1_revocation_early_cutoff_pair_exists",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        },
+        {
+          "id": "b3"
+        },
+        {
+          "id": "b9"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b3",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b9",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        }
+      ],
+      "trusted_sources": [
+        {
+          "repo": "ci/L",
+          "commit": "c1",
+          "digest": "1ed4840a01ee3b4cc2ea4f87383c7e96011d249999fea47d28fceca96ae4513a"
+        }
+      ],
+      "declarations": [
+        {
+          "id": "r1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r1",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "px"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "r2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b2",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r2",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "px"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x1",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b1",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x1",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x2",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b2",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x2",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x3",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b3",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x3",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "l1",
+          "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+          "builder": "b9",
+          "issued_at": 80,
+          "source": {
+            "repo": "ci/L",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-L-l1",
+          "dependencies": [],
+          "signature_valid": true
+        }
+      ],
+      "revocations": [
+        {
+          "id": "rv1",
+          "declaration_id": "x1",
+          "occurred_at": 500,
+          "sequence": 1,
+          "trace_issued_at": 90
+        }
+      ],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 400,
+        "cutoff_sequence": null
+      }
+    },
+    {
+      "case_id": "C2_revocation_late_cutoff_pair_destroyed",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        },
+        {
+          "id": "b3"
+        },
+        {
+          "id": "b9"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b3",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b9",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        }
+      ],
+      "trusted_sources": [
+        {
+          "repo": "ci/L",
+          "commit": "c1",
+          "digest": "1ed4840a01ee3b4cc2ea4f87383c7e96011d249999fea47d28fceca96ae4513a"
+        }
+      ],
+      "declarations": [
+        {
+          "id": "r1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r1",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "px"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "r2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b2",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r2",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "px"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x1",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b1",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x1",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x2",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b2",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x2",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x3",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b3",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x3",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "l1",
+          "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+          "builder": "b9",
+          "issued_at": 80,
+          "source": {
+            "repo": "ci/L",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-L-l1",
+          "dependencies": [],
+          "signature_valid": true
+        }
+      ],
+      "revocations": [
+        {
+          "id": "rv1",
+          "declaration_id": "x1",
+          "occurred_at": 500,
+          "sequence": 1,
+          "trace_issued_at": 90
+        },
+        {
+          "id": "rv2",
+          "declaration_id": "x2",
+          "occurred_at": 550,
+          "sequence": 2,
+          "trace_issued_at": 90
+        }
+      ],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 600,
+        "cutoff_sequence": null
+      }
+    },
+    {
+      "case_id": "C3_revocation_sequence_cutoff",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        },
+        {
+          "id": "b3"
+        },
+        {
+          "id": "b9"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b3",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b9",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        }
+      ],
+      "trusted_sources": [
+        {
+          "repo": "ci/L",
+          "commit": "c1",
+          "digest": "1ed4840a01ee3b4cc2ea4f87383c7e96011d249999fea47d28fceca96ae4513a"
+        }
+      ],
+      "declarations": [
+        {
+          "id": "r1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r1",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "px"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "r2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b2",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r2",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "px"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x1",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b1",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x1",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x2",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b2",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x2",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x3",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b3",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x3",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "l1",
+          "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+          "builder": "b9",
+          "issued_at": 80,
+          "source": {
+            "repo": "ci/L",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-L-l1",
+          "dependencies": [],
+          "signature_valid": true
+        }
+      ],
+      "revocations": [
+        {
+          "id": "rv1",
+          "declaration_id": "x1",
+          "occurred_at": 500,
+          "sequence": 1,
+          "trace_issued_at": 90
+        },
+        {
+          "id": "rv2",
+          "declaration_id": "x2",
+          "occurred_at": 500,
+          "sequence": 2,
+          "trace_issued_at": 90
+        }
+      ],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 600,
+        "cutoff_sequence": 1
+      }
+    },
+    {
+      "case_id": "D_shared_dependency_not_double_counted",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        },
+        {
+          "id": "b3"
+        },
+        {
+          "id": "b9"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b3",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b9",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        }
+      ],
+      "trusted_sources": [
+        {
+          "repo": "ci/Lx",
+          "commit": "c1",
+          "digest": "5bfe1e2443213dc22a1ce60bc6c6c4d79a3a0d27413e772ae61e36b74f4cb0a5"
+        },
+        {
+          "repo": "ci/Ly",
+          "commit": "c1",
+          "digest": "11633bd204627af16807a8be99c23ae9ee4b60226c0bada091d6ea40ee794d0d"
+        }
+      ],
+      "declarations": [
+        {
+          "id": "r1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r1",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "px"
+            },
+            {
+              "digest": "536c4c1ac011d97da0a5724c36601b6bb3a58de30d262f89f21896271eab575e",
+              "dep_summary": "py"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "r2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b2",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r2",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "px"
+            },
+            {
+              "digest": "536c4c1ac011d97da0a5724c36601b6bb3a58de30d262f89f21896271eab575e",
+              "dep_summary": "py"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x1",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b3",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x1",
+          "dependencies": [
+            {
+              "digest": "2fbe1430fe7b72be86562589aa06769bf5574e17a90c18c9885ec347dc42d8b2",
+              "dep_summary": "plx"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "y1",
+          "artifact_digest": "536c4c1ac011d97da0a5724c36601b6bb3a58de30d262f89f21896271eab575e",
+          "builder": "b3",
+          "issued_at": 88,
+          "source": {
+            "repo": "ci/Y",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-Y-y1",
+          "dependencies": [
+            {
+              "digest": "5b94910003a4be171dc5b23a5e2c311aa1b0c9a6960289812df7e3ad933e8af4",
+              "dep_summary": "ply"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "lx",
+          "artifact_digest": "2fbe1430fe7b72be86562589aa06769bf5574e17a90c18c9885ec347dc42d8b2",
+          "builder": "b9",
+          "issued_at": 82,
+          "source": {
+            "repo": "ci/Lx",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-Lx-lx",
+          "dependencies": [],
+          "signature_valid": true
+        },
+        {
+          "id": "ly",
+          "artifact_digest": "5b94910003a4be171dc5b23a5e2c311aa1b0c9a6960289812df7e3ad933e8af4",
+          "builder": "b9",
+          "issued_at": 81,
+          "source": {
+            "repo": "ci/Ly",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-Ly-ly",
+          "dependencies": [],
+          "signature_valid": true
+        }
+      ],
+      "revocations": [],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 10000,
+        "cutoff_sequence": null
+      }
+    },
+    {
+      "case_id": "D2_shared_trusted_source_allowed",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        }
+      ],
+      "trusted_sources": [
+        {
+          "repo": "ci/X",
+          "commit": "c1",
+          "digest": "9d438c7bc45f7dc30e1de6a173573fd3425a10154449b56574a618ee571dcc61"
+        },
+        {
+          "repo": "ci/Y",
+          "commit": "c1",
+          "digest": "e07bad492ed7dc102e045f987fd7c1c3621c55f9f6a487f706de62be346673b0"
+        }
+      ],
+      "declarations": [
+        {
+          "id": "r1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r1",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "px"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "r2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b2",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r2",
+          "dependencies": [
+            {
+              "digest": "536c4c1ac011d97da0a5724c36601b6bb3a58de30d262f89f21896271eab575e",
+              "dep_summary": "py"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x1",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b1",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x1",
+          "dependencies": [],
+          "signature_valid": true
+        },
+        {
+          "id": "y1",
+          "artifact_digest": "536c4c1ac011d97da0a5724c36601b6bb3a58de30d262f89f21896271eab575e",
+          "builder": "b2",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/Y",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-Y-y1",
+          "dependencies": [],
+          "signature_valid": true
+        }
+      ],
+      "revocations": [],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 10000,
+        "cutoff_sequence": null
+      }
+    },
+    {
+      "case_id": "E_small_set_but_longer_proof",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        },
+        {
+          "id": "b3"
+        },
+        {
+          "id": "b9"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b3",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b9",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        }
+      ],
+      "trusted_sources": [
+        {
+          "repo": "ci/L",
+          "commit": "c1",
+          "digest": "1ed4840a01ee3b4cc2ea4f87383c7e96011d249999fea47d28fceca96ae4513a"
+        }
+      ],
+      "declarations": [
+        {
+          "id": "r1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r1",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "px"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "r2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b2",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r2",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "px"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x1",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b1",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x1",
+          "dependencies": [
+            {
+              "digest": "9e6bb87ef59dff29376e63d5a849f17caef9ba2a93bc7fc924494ef666c486b0",
+              "dep_summary": "pm"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x2",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b3",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x2",
+          "dependencies": [
+            {
+              "digest": "2346b31dfc9b621eb572e2201217c3f7d16430ce1e2591e1dded1ada521730c0",
+              "dep_summary": "pq"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "m1",
+          "artifact_digest": "9e6bb87ef59dff29376e63d5a849f17caef9ba2a93bc7fc924494ef666c486b0",
+          "builder": "b1",
+          "issued_at": 85,
+          "source": {
+            "repo": "ci/M",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-M-m1",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "q1",
+          "artifact_digest": "2346b31dfc9b621eb572e2201217c3f7d16430ce1e2591e1dded1ada521730c0",
+          "builder": "b3",
+          "issued_at": 84,
+          "source": {
+            "repo": "ci/Q",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-Q-q1",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "l1",
+          "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+          "builder": "b9",
+          "issued_at": 80,
+          "source": {
+            "repo": "ci/L",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-L-l1",
+          "dependencies": [],
+          "signature_valid": true
+        }
+      ],
+      "revocations": [],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 10000,
+        "cutoff_sequence": null
+      }
+    },
+    {
+      "case_id": "F_authorization_boundaries",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        },
+        {
+          "id": "b3"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 200
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 200
+        },
+        {
+          "issuer": "b3",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 1000
+        }
+      ],
+      "trusted_sources": [
+        {
+          "repo": "ci/R",
+          "commit": "c1",
+          "digest": "e118361947632aab92f429b59defe33ac685f5dbb699bfb1b6799424013546d7"
+        },
+        {
+          "repo": "vendor/R",
+          "commit": "c1",
+          "digest": "086d70fd42c3ce3a527c9e49998ef24e011e745a34ae72ee0afdbd7dd6977823"
+        }
+      ],
+      "declarations": [
+        {
+          "id": "r1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r1",
+          "dependencies": [],
+          "signature_valid": true
+        },
+        {
+          "id": "r2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b2",
+          "issued_at": 200,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r2",
+          "dependencies": [],
+          "signature_valid": true
+        },
+        {
+          "id": "r3",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b3",
+          "issued_at": 100,
+          "source": {
+            "repo": "vendor/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r3",
+          "dependencies": [],
+          "signature_valid": true
+        }
+      ],
+      "revocations": [],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 10000,
+        "cutoff_sequence": null
+      }
+    },
+    {
+      "case_id": "G_bad_signature_blocks_leaves",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        },
+        {
+          "id": "b9"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b9",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        }
+      ],
+      "trusted_sources": [
+        {
+          "repo": "ci/L",
+          "commit": "c1",
+          "digest": "1ed4840a01ee3b4cc2ea4f87383c7e96011d249999fea47d28fceca96ae4513a"
+        }
+      ],
+      "declarations": [
+        {
+          "id": "r1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r1",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "r2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b2",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r2",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "l1",
+          "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+          "builder": "b9",
+          "issued_at": 80,
+          "source": {
+            "repo": "ci/L",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-L-l1",
+          "dependencies": [],
+          "signature_valid": false
+        }
+      ],
+      "revocations": [],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 10000,
+        "cutoff_sequence": null
+      }
+    },
+    {
+      "case_id": "H_untrusted_leaf_rejected",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        },
+        {
+          "id": "b9"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b9",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        }
+      ],
+      "trusted_sources": [],
+      "declarations": [
+        {
+          "id": "r1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r1",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "r2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b2",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R-r2",
+          "dependencies": [
+            {
+              "digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+              "dep_summary": "pl"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "l1",
+          "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+          "builder": "b9",
+          "issued_at": 80,
+          "source": {
+            "repo": "ci/L",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-L-l1",
+          "dependencies": [],
+          "signature_valid": true
+        }
+      ],
+      "revocations": [],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 10000,
+        "cutoff_sequence": null
+      }
+    },
+    {
+      "case_id": "I_sibling_choice_diversity",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        },
+        {
+          "id": "b3"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b3",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        }
+      ],
+      "trusted_sources": [
+        {
+          "repo": "ci/X",
+          "commit": "c1",
+          "digest": "9d438c7bc45f7dc30e1de6a173573fd3425a10154449b56574a618ee571dcc61"
+        },
+        {
+          "repo": "ci/Y",
+          "commit": "c1",
+          "digest": "e07bad492ed7dc102e045f987fd7c1c3621c55f9f6a487f706de62be346673b0"
+        }
+      ],
+      "declarations": [
+        {
+          "id": "r1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "pa"
+            },
+            {
+              "digest": "536c4c1ac011d97da0a5724c36601b6bb3a58de30d262f89f21896271eab575e",
+              "dep_summary": "pb"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x1",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b2",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x1",
+          "dependencies": [],
+          "signature_valid": true
+        },
+        {
+          "id": "y1",
+          "artifact_digest": "536c4c1ac011d97da0a5724c36601b6bb3a58de30d262f89f21896271eab575e",
+          "builder": "b3",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/Y",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-Y-y1",
+          "dependencies": [],
+          "signature_valid": true
+        }
+      ],
+      "revocations": [],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 10000,
+        "cutoff_sequence": null
+      }
+    },
+    {
+      "case_id": "J_sibling_same_artifact_different_declarations",
+      "issuers": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        },
+        {
+          "id": "b3"
+        }
+      ],
+      "authorizations": [
+        {
+          "issuer": "b1",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b2",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        },
+        {
+          "issuer": "b3",
+          "repo": "ci",
+          "not_before": 0,
+          "not_after": 10000
+        }
+      ],
+      "trusted_sources": [
+        {
+          "repo": "ci/X",
+          "commit": "c1",
+          "digest": "9d438c7bc45f7dc30e1de6a173573fd3425a10154449b56574a618ee571dcc61"
+        }
+      ],
+      "declarations": [
+        {
+          "id": "r1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "builder": "b1",
+          "issued_at": 100,
+          "source": {
+            "repo": "ci/R",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-R",
+          "dependencies": [
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "sa"
+            },
+            {
+              "digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "dep_summary": "sb"
+            }
+          ],
+          "signature_valid": true
+        },
+        {
+          "id": "x1",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b2",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x1",
+          "dependencies": [],
+          "signature_valid": true
+        },
+        {
+          "id": "x2",
+          "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+          "builder": "b3",
+          "issued_at": 90,
+          "source": {
+            "repo": "ci/X",
+            "commit": "c1"
+          },
+          "dependency_summary": "sum-X-x2",
+          "dependencies": [],
+          "signature_valid": true
+        }
+      ],
+      "revocations": [],
+      "query": {
+        "root_artifact": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+        "audit_cutoff": 10000,
+        "cutoff_sequence": null
+      }
+    }
+  ]
+}

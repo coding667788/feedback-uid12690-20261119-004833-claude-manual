@@ -1,0 +1,2131 @@
+{
+  "generated_at_epoch": 1795026755,
+  "case_total": 15,
+  "ok_total": 7,
+  "fail_total": 8,
+  "all_ok": false,
+  "results": [
+    {
+      "case_id": "A_local_shortest_dead_end",
+      "status": "ok",
+      "selected": [
+        {
+          "kind": "node",
+          "declaration_id": "d1",
+          "builder": "b1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "declaration_occurrences_in_subtree": 3,
+          "non_source_issuers_in_subtree": [
+            "b1"
+          ],
+          "canonical_dfs": [
+            "d1",
+            "x1",
+            "l1"
+          ],
+          "children": [
+            {
+              "kind": "node",
+              "declaration_id": "x1",
+              "builder": "b1",
+              "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "declaration_occurrences_in_subtree": 2,
+              "non_source_issuers_in_subtree": [
+                "b1"
+              ],
+              "canonical_dfs": [
+                "x1",
+                "l1"
+              ],
+              "children": [
+                {
+                  "kind": "node",
+                  "declaration_id": "l1",
+                  "builder": "b3",
+                  "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+                  "declaration_occurrences_in_subtree": 1,
+                  "non_source_issuers_in_subtree": [],
+                  "canonical_dfs": [
+                    "l1"
+                  ],
+                  "children": [
+                    {
+                      "kind": "leaf",
+                      "trusted_source": {
+                        "repo": "ci/L",
+                        "commit": "c1"
+                      },
+                      "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "node",
+          "declaration_id": "d2",
+          "builder": "b2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "declaration_occurrences_in_subtree": 3,
+          "non_source_issuers_in_subtree": [
+            "b2"
+          ],
+          "canonical_dfs": [
+            "d2",
+            "x2",
+            "l1"
+          ],
+          "children": [
+            {
+              "kind": "node",
+              "declaration_id": "x2",
+              "builder": "b2",
+              "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "declaration_occurrences_in_subtree": 2,
+              "non_source_issuers_in_subtree": [
+                "b2"
+              ],
+              "canonical_dfs": [
+                "x2",
+                "l1"
+              ],
+              "children": [
+                {
+                  "kind": "node",
+                  "declaration_id": "l1",
+                  "builder": "b3",
+                  "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+                  "declaration_occurrences_in_subtree": 1,
+                  "non_source_issuers_in_subtree": [],
+                  "canonical_dfs": [
+                    "l1"
+                  ],
+                  "children": [
+                    {
+                      "kind": "leaf",
+                      "trusted_source": {
+                        "repo": "ci/L",
+                        "commit": "c1"
+                      },
+                      "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "optimization": {
+        "total_declaration_occurrences": 6,
+        "first_tree_occurrences": 3,
+        "second_tree_occurrences": 3,
+        "canonical_dfs_sequence": [
+          [
+            "d1",
+            "x1",
+            "l1"
+          ],
+          [
+            "d2",
+            "x2",
+            "l1"
+          ]
+        ],
+        "pair_ordering": "两棵树按各自规范 DFS 声明 ID 序列字典序归一排序"
+      },
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 4,
+        "declaration_count": 7,
+        "issuer_count": 3,
+        "trusted_source_count": 1,
+        "eligible_declaration_count": 7,
+        "eligible_declaration_ids": [
+          "d1",
+          "d2",
+          "d3",
+          "l1",
+          "x1",
+          "x2",
+          "y1"
+        ],
+        "revocation_total": 0,
+        "revocation_visible_count": 0,
+        "visible_revocations": [],
+        "root_proof_count_after_pruning": 4,
+        "proof_trees_enumerated_nodes": 12,
+        "root_proof_summaries": [
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b1"
+            ],
+            "canonical_dfs": [
+              "d1",
+              "x1",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b1",
+              "b2"
+            ],
+            "canonical_dfs": [
+              "d1",
+              "x2",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b2"
+            ],
+            "canonical_dfs": [
+              "d2",
+              "x2",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b3"
+            ],
+            "canonical_dfs": [
+              "d3",
+              "y1",
+              "l1"
+            ]
+          }
+        ],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "d1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "d2",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "d3",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "l1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x2",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "y1",
+            "eligible": true,
+            "reasons": []
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "A2_local_shortest_dead_end_two_layer",
+      "status": "ok",
+      "selected": [
+        {
+          "kind": "node",
+          "declaration_id": "d1",
+          "builder": "b1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "declaration_occurrences_in_subtree": 3,
+          "non_source_issuers_in_subtree": [
+            "b1",
+            "bk"
+          ],
+          "canonical_dfs": [
+            "d1",
+            "k1",
+            "l1"
+          ],
+          "children": [
+            {
+              "kind": "node",
+              "declaration_id": "k1",
+              "builder": "bk",
+              "artifact_digest": "22b616e09571770ca929036b2b9d60fd3df477d8648de764230e0ee6e048ed44",
+              "declaration_occurrences_in_subtree": 2,
+              "non_source_issuers_in_subtree": [
+                "bk"
+              ],
+              "canonical_dfs": [
+                "k1",
+                "l1"
+              ],
+              "children": [
+                {
+                  "kind": "node",
+                  "declaration_id": "l1",
+                  "builder": "b9",
+                  "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+                  "declaration_occurrences_in_subtree": 1,
+                  "non_source_issuers_in_subtree": [],
+                  "canonical_dfs": [
+                    "l1"
+                  ],
+                  "children": [
+                    {
+                      "kind": "leaf",
+                      "trusted_source": {
+                        "repo": "ci/L",
+                        "commit": "c1"
+                      },
+                      "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "node",
+          "declaration_id": "d3",
+          "builder": "b4",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "declaration_occurrences_in_subtree": 4,
+          "non_source_issuers_in_subtree": [
+            "b4"
+          ],
+          "canonical_dfs": [
+            "d3",
+            "y1",
+            "z1",
+            "l1"
+          ],
+          "children": [
+            {
+              "kind": "node",
+              "declaration_id": "y1",
+              "builder": "b4",
+              "artifact_digest": "536c4c1ac011d97da0a5724c36601b6bb3a58de30d262f89f21896271eab575e",
+              "declaration_occurrences_in_subtree": 3,
+              "non_source_issuers_in_subtree": [
+                "b4"
+              ],
+              "canonical_dfs": [
+                "y1",
+                "z1",
+                "l1"
+              ],
+              "children": [
+                {
+                  "kind": "node",
+                  "declaration_id": "z1",
+                  "builder": "b4",
+                  "artifact_digest": "f249a391cc0a9bbc1d2260291546a50d24e4befbd8f9606f5d1993ed3c47f806",
+                  "declaration_occurrences_in_subtree": 2,
+                  "non_source_issuers_in_subtree": [
+                    "b4"
+                  ],
+                  "canonical_dfs": [
+                    "z1",
+                    "l1"
+                  ],
+                  "children": [
+                    {
+                      "kind": "node",
+                      "declaration_id": "l1",
+                      "builder": "b9",
+                      "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+                      "declaration_occurrences_in_subtree": 1,
+                      "non_source_issuers_in_subtree": [],
+                      "canonical_dfs": [
+                        "l1"
+                      ],
+                      "children": [
+                        {
+                          "kind": "leaf",
+                          "trusted_source": {
+                            "repo": "ci/L",
+                            "commit": "c1"
+                          },
+                          "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "optimization": {
+        "total_declaration_occurrences": 7,
+        "first_tree_occurrences": 3,
+        "second_tree_occurrences": 4,
+        "canonical_dfs_sequence": [
+          [
+            "d1",
+            "k1",
+            "l1"
+          ],
+          [
+            "d3",
+            "y1",
+            "z1",
+            "l1"
+          ]
+        ],
+        "pair_ordering": "两棵树按各自规范 DFS 声明 ID 序列字典序归一排序"
+      },
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 5,
+        "declaration_count": 7,
+        "issuer_count": 5,
+        "trusted_source_count": 1,
+        "eligible_declaration_count": 7,
+        "eligible_declaration_ids": [
+          "d1",
+          "d2",
+          "d3",
+          "k1",
+          "l1",
+          "y1",
+          "z1"
+        ],
+        "revocation_total": 0,
+        "revocation_visible_count": 0,
+        "visible_revocations": [],
+        "root_proof_count_after_pruning": 3,
+        "proof_trees_enumerated_nodes": 10,
+        "root_proof_summaries": [
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b1",
+              "bk"
+            ],
+            "canonical_dfs": [
+              "d1",
+              "k1",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b2",
+              "bk"
+            ],
+            "canonical_dfs": [
+              "d2",
+              "k1",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 4,
+            "non_source_issuers": [
+              "b4"
+            ],
+            "canonical_dfs": [
+              "d3",
+              "y1",
+              "z1",
+              "l1"
+            ]
+          }
+        ],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "d1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "d2",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "d3",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "k1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "l1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "y1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "z1",
+            "eligible": true,
+            "reasons": []
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "B_bypass_breaks_cycle",
+      "status": "ok",
+      "selected": [
+        {
+          "kind": "node",
+          "declaration_id": "r1",
+          "builder": "b1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "declaration_occurrences_in_subtree": 2,
+          "non_source_issuers_in_subtree": [
+            "b1"
+          ],
+          "canonical_dfs": [
+            "r1",
+            "a2"
+          ],
+          "children": [
+            {
+              "kind": "node",
+              "declaration_id": "a2",
+              "builder": "b3",
+              "artifact_digest": "cfa0fd97d384a6eedca49ba995e0611463bfdb3f0ed7007cc8ea41ebbba8cab0",
+              "declaration_occurrences_in_subtree": 1,
+              "non_source_issuers_in_subtree": [],
+              "canonical_dfs": [
+                "a2"
+              ],
+              "children": [
+                {
+                  "kind": "leaf",
+                  "trusted_source": {
+                    "repo": "ci/A",
+                    "commit": "c1"
+                  },
+                  "artifact_digest": "cfa0fd97d384a6eedca49ba995e0611463bfdb3f0ed7007cc8ea41ebbba8cab0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "node",
+          "declaration_id": "r2",
+          "builder": "b2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "declaration_occurrences_in_subtree": 2,
+          "non_source_issuers_in_subtree": [
+            "b2"
+          ],
+          "canonical_dfs": [
+            "r2",
+            "a2"
+          ],
+          "children": [
+            {
+              "kind": "node",
+              "declaration_id": "a2",
+              "builder": "b3",
+              "artifact_digest": "cfa0fd97d384a6eedca49ba995e0611463bfdb3f0ed7007cc8ea41ebbba8cab0",
+              "declaration_occurrences_in_subtree": 1,
+              "non_source_issuers_in_subtree": [],
+              "canonical_dfs": [
+                "a2"
+              ],
+              "children": [
+                {
+                  "kind": "leaf",
+                  "trusted_source": {
+                    "repo": "ci/A",
+                    "commit": "c1"
+                  },
+                  "artifact_digest": "cfa0fd97d384a6eedca49ba995e0611463bfdb3f0ed7007cc8ea41ebbba8cab0"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "optimization": {
+        "total_declaration_occurrences": 4,
+        "first_tree_occurrences": 2,
+        "second_tree_occurrences": 2,
+        "canonical_dfs_sequence": [
+          [
+            "r1",
+            "a2"
+          ],
+          [
+            "r2",
+            "a2"
+          ]
+        ],
+        "pair_ordering": "两棵树按各自规范 DFS 声明 ID 序列字典序归一排序"
+      },
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 3,
+        "declaration_count": 5,
+        "issuer_count": 3,
+        "trusted_source_count": 1,
+        "eligible_declaration_count": 5,
+        "eligible_declaration_ids": [
+          "a1",
+          "a2",
+          "bb1",
+          "r1",
+          "r2"
+        ],
+        "revocation_total": 0,
+        "revocation_visible_count": 0,
+        "visible_revocations": [],
+        "root_proof_count_after_pruning": 2,
+        "proof_trees_enumerated_nodes": 4,
+        "root_proof_summaries": [
+          {
+            "occurrences": 2,
+            "non_source_issuers": [
+              "b1"
+            ],
+            "canonical_dfs": [
+              "r1",
+              "a2"
+            ]
+          },
+          {
+            "occurrences": 2,
+            "non_source_issuers": [
+              "b2"
+            ],
+            "canonical_dfs": [
+              "r2",
+              "a2"
+            ]
+          }
+        ],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "a1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "a2",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "bb1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r2",
+            "eligible": true,
+            "reasons": []
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "B2_pure_cycle_no_complete_proof",
+      "status": "fail",
+      "error_code": "NO_COMPLETE_PROOF",
+      "message": "根产物不存在可展开到可信源码的完备证明",
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 3,
+        "declaration_count": 3,
+        "issuer_count": 2,
+        "trusted_source_count": 0,
+        "eligible_declaration_count": 3,
+        "eligible_declaration_ids": [
+          "a1",
+          "bb1",
+          "r1"
+        ],
+        "revocation_total": 0,
+        "revocation_visible_count": 0,
+        "visible_revocations": [],
+        "root_proof_count_after_pruning": 0,
+        "proof_trees_enumerated_nodes": 0,
+        "root_proof_summaries": [],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "a1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "bb1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r1",
+            "eligible": true,
+            "reasons": []
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "C1_revocation_early_cutoff_pair_exists",
+      "status": "ok",
+      "selected": [
+        {
+          "kind": "node",
+          "declaration_id": "r1",
+          "builder": "b1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "declaration_occurrences_in_subtree": 3,
+          "non_source_issuers_in_subtree": [
+            "b1"
+          ],
+          "canonical_dfs": [
+            "r1",
+            "x1",
+            "l1"
+          ],
+          "children": [
+            {
+              "kind": "node",
+              "declaration_id": "x1",
+              "builder": "b1",
+              "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "declaration_occurrences_in_subtree": 2,
+              "non_source_issuers_in_subtree": [
+                "b1"
+              ],
+              "canonical_dfs": [
+                "x1",
+                "l1"
+              ],
+              "children": [
+                {
+                  "kind": "node",
+                  "declaration_id": "l1",
+                  "builder": "b9",
+                  "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+                  "declaration_occurrences_in_subtree": 1,
+                  "non_source_issuers_in_subtree": [],
+                  "canonical_dfs": [
+                    "l1"
+                  ],
+                  "children": [
+                    {
+                      "kind": "leaf",
+                      "trusted_source": {
+                        "repo": "ci/L",
+                        "commit": "c1"
+                      },
+                      "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "node",
+          "declaration_id": "r2",
+          "builder": "b2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "declaration_occurrences_in_subtree": 3,
+          "non_source_issuers_in_subtree": [
+            "b2"
+          ],
+          "canonical_dfs": [
+            "r2",
+            "x2",
+            "l1"
+          ],
+          "children": [
+            {
+              "kind": "node",
+              "declaration_id": "x2",
+              "builder": "b2",
+              "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "declaration_occurrences_in_subtree": 2,
+              "non_source_issuers_in_subtree": [
+                "b2"
+              ],
+              "canonical_dfs": [
+                "x2",
+                "l1"
+              ],
+              "children": [
+                {
+                  "kind": "node",
+                  "declaration_id": "l1",
+                  "builder": "b9",
+                  "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+                  "declaration_occurrences_in_subtree": 1,
+                  "non_source_issuers_in_subtree": [],
+                  "canonical_dfs": [
+                    "l1"
+                  ],
+                  "children": [
+                    {
+                      "kind": "leaf",
+                      "trusted_source": {
+                        "repo": "ci/L",
+                        "commit": "c1"
+                      },
+                      "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "optimization": {
+        "total_declaration_occurrences": 6,
+        "first_tree_occurrences": 3,
+        "second_tree_occurrences": 3,
+        "canonical_dfs_sequence": [
+          [
+            "r1",
+            "x1",
+            "l1"
+          ],
+          [
+            "r2",
+            "x2",
+            "l1"
+          ]
+        ],
+        "pair_ordering": "两棵树按各自规范 DFS 声明 ID 序列字典序归一排序"
+      },
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 3,
+        "declaration_count": 6,
+        "issuer_count": 4,
+        "trusted_source_count": 1,
+        "eligible_declaration_count": 6,
+        "eligible_declaration_ids": [
+          "l1",
+          "r1",
+          "r2",
+          "x1",
+          "x2",
+          "x3"
+        ],
+        "revocation_total": 1,
+        "revocation_visible_count": 0,
+        "visible_revocations": [],
+        "root_proof_count_after_pruning": 5,
+        "proof_trees_enumerated_nodes": 11,
+        "root_proof_summaries": [
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b1"
+            ],
+            "canonical_dfs": [
+              "r1",
+              "x1",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b1",
+              "b2"
+            ],
+            "canonical_dfs": [
+              "r1",
+              "x2",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b1",
+              "b3"
+            ],
+            "canonical_dfs": [
+              "r1",
+              "x3",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b2"
+            ],
+            "canonical_dfs": [
+              "r2",
+              "x2",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b2",
+              "b3"
+            ],
+            "canonical_dfs": [
+              "r2",
+              "x3",
+              "l1"
+            ]
+          }
+        ],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "l1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r2",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x2",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x3",
+            "eligible": true,
+            "reasons": []
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "C2_revocation_late_cutoff_pair_destroyed",
+      "status": "fail",
+      "error_code": "NO_INDEPENDENT_PAIR",
+      "message": "存在完备证明，但任意两份的非源码签发者集合均不互斥",
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 3,
+        "declaration_count": 6,
+        "issuer_count": 4,
+        "trusted_source_count": 1,
+        "eligible_declaration_count": 4,
+        "eligible_declaration_ids": [
+          "l1",
+          "r1",
+          "r2",
+          "x3"
+        ],
+        "revocation_total": 2,
+        "revocation_visible_count": 2,
+        "visible_revocations": [
+          {
+            "id": "rv1",
+            "declaration_id": "x1",
+            "occurred_at": 500,
+            "sequence": 1,
+            "trace_issued_at": 90
+          },
+          {
+            "id": "rv2",
+            "declaration_id": "x2",
+            "occurred_at": 550,
+            "sequence": 2,
+            "trace_issued_at": 90
+          }
+        ],
+        "root_proof_count_after_pruning": 2,
+        "proof_trees_enumerated_nodes": 5,
+        "root_proof_summaries": [
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b1",
+              "b3"
+            ],
+            "canonical_dfs": [
+              "r1",
+              "x3",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b2",
+              "b3"
+            ],
+            "canonical_dfs": [
+              "r2",
+              "x3",
+              "l1"
+            ]
+          }
+        ],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "l1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r2",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x1",
+            "eligible": false,
+            "reasons": [
+              "已被审计截点内可见的撤销记录撤销"
+            ]
+          },
+          {
+            "declaration_id": "x2",
+            "eligible": false,
+            "reasons": [
+              "已被审计截点内可见的撤销记录撤销"
+            ]
+          },
+          {
+            "declaration_id": "x3",
+            "eligible": true,
+            "reasons": []
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "C3_revocation_sequence_cutoff",
+      "status": "ok",
+      "selected": [
+        {
+          "kind": "node",
+          "declaration_id": "r1",
+          "builder": "b1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "declaration_occurrences_in_subtree": 3,
+          "non_source_issuers_in_subtree": [
+            "b1",
+            "b3"
+          ],
+          "canonical_dfs": [
+            "r1",
+            "x3",
+            "l1"
+          ],
+          "children": [
+            {
+              "kind": "node",
+              "declaration_id": "x3",
+              "builder": "b3",
+              "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "declaration_occurrences_in_subtree": 2,
+              "non_source_issuers_in_subtree": [
+                "b3"
+              ],
+              "canonical_dfs": [
+                "x3",
+                "l1"
+              ],
+              "children": [
+                {
+                  "kind": "node",
+                  "declaration_id": "l1",
+                  "builder": "b9",
+                  "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+                  "declaration_occurrences_in_subtree": 1,
+                  "non_source_issuers_in_subtree": [],
+                  "canonical_dfs": [
+                    "l1"
+                  ],
+                  "children": [
+                    {
+                      "kind": "leaf",
+                      "trusted_source": {
+                        "repo": "ci/L",
+                        "commit": "c1"
+                      },
+                      "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "node",
+          "declaration_id": "r2",
+          "builder": "b2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "declaration_occurrences_in_subtree": 3,
+          "non_source_issuers_in_subtree": [
+            "b2"
+          ],
+          "canonical_dfs": [
+            "r2",
+            "x2",
+            "l1"
+          ],
+          "children": [
+            {
+              "kind": "node",
+              "declaration_id": "x2",
+              "builder": "b2",
+              "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "declaration_occurrences_in_subtree": 2,
+              "non_source_issuers_in_subtree": [
+                "b2"
+              ],
+              "canonical_dfs": [
+                "x2",
+                "l1"
+              ],
+              "children": [
+                {
+                  "kind": "node",
+                  "declaration_id": "l1",
+                  "builder": "b9",
+                  "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+                  "declaration_occurrences_in_subtree": 1,
+                  "non_source_issuers_in_subtree": [],
+                  "canonical_dfs": [
+                    "l1"
+                  ],
+                  "children": [
+                    {
+                      "kind": "leaf",
+                      "trusted_source": {
+                        "repo": "ci/L",
+                        "commit": "c1"
+                      },
+                      "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "optimization": {
+        "total_declaration_occurrences": 6,
+        "first_tree_occurrences": 3,
+        "second_tree_occurrences": 3,
+        "canonical_dfs_sequence": [
+          [
+            "r1",
+            "x3",
+            "l1"
+          ],
+          [
+            "r2",
+            "x2",
+            "l1"
+          ]
+        ],
+        "pair_ordering": "两棵树按各自规范 DFS 声明 ID 序列字典序归一排序"
+      },
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 3,
+        "declaration_count": 6,
+        "issuer_count": 4,
+        "trusted_source_count": 1,
+        "eligible_declaration_count": 5,
+        "eligible_declaration_ids": [
+          "l1",
+          "r1",
+          "r2",
+          "x2",
+          "x3"
+        ],
+        "revocation_total": 2,
+        "revocation_visible_count": 1,
+        "visible_revocations": [
+          {
+            "id": "rv1",
+            "declaration_id": "x1",
+            "occurred_at": 500,
+            "sequence": 1,
+            "trace_issued_at": 90
+          }
+        ],
+        "root_proof_count_after_pruning": 4,
+        "proof_trees_enumerated_nodes": 8,
+        "root_proof_summaries": [
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b1",
+              "b2"
+            ],
+            "canonical_dfs": [
+              "r1",
+              "x2",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b1",
+              "b3"
+            ],
+            "canonical_dfs": [
+              "r1",
+              "x3",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b2"
+            ],
+            "canonical_dfs": [
+              "r2",
+              "x2",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b2",
+              "b3"
+            ],
+            "canonical_dfs": [
+              "r2",
+              "x3",
+              "l1"
+            ]
+          }
+        ],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "l1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r2",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x1",
+            "eligible": false,
+            "reasons": [
+              "已被审计截点内可见的撤销记录撤销"
+            ]
+          },
+          {
+            "declaration_id": "x2",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x3",
+            "eligible": true,
+            "reasons": []
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "D_shared_dependency_not_double_counted",
+      "status": "fail",
+      "error_code": "NO_INDEPENDENT_PAIR",
+      "message": "存在完备证明，但任意两份的非源码签发者集合均不互斥",
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 5,
+        "declaration_count": 6,
+        "issuer_count": 4,
+        "trusted_source_count": 2,
+        "eligible_declaration_count": 6,
+        "eligible_declaration_ids": [
+          "lx",
+          "ly",
+          "r1",
+          "r2",
+          "x1",
+          "y1"
+        ],
+        "revocation_total": 0,
+        "revocation_visible_count": 0,
+        "visible_revocations": [],
+        "root_proof_count_after_pruning": 2,
+        "proof_trees_enumerated_nodes": 8,
+        "root_proof_summaries": [
+          {
+            "occurrences": 5,
+            "non_source_issuers": [
+              "b1",
+              "b3"
+            ],
+            "canonical_dfs": [
+              "r1",
+              "x1",
+              "lx",
+              "y1",
+              "ly"
+            ]
+          },
+          {
+            "occurrences": 5,
+            "non_source_issuers": [
+              "b2",
+              "b3"
+            ],
+            "canonical_dfs": [
+              "r2",
+              "x1",
+              "lx",
+              "y1",
+              "ly"
+            ]
+          }
+        ],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "lx",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "ly",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r2",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "y1",
+            "eligible": true,
+            "reasons": []
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "D2_shared_trusted_source_allowed",
+      "status": "ok",
+      "selected": [
+        {
+          "kind": "node",
+          "declaration_id": "r1",
+          "builder": "b1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "declaration_occurrences_in_subtree": 2,
+          "non_source_issuers_in_subtree": [
+            "b1"
+          ],
+          "canonical_dfs": [
+            "r1",
+            "x1"
+          ],
+          "children": [
+            {
+              "kind": "node",
+              "declaration_id": "x1",
+              "builder": "b1",
+              "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "declaration_occurrences_in_subtree": 1,
+              "non_source_issuers_in_subtree": [],
+              "canonical_dfs": [
+                "x1"
+              ],
+              "children": [
+                {
+                  "kind": "leaf",
+                  "trusted_source": {
+                    "repo": "ci/X",
+                    "commit": "c1"
+                  },
+                  "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "node",
+          "declaration_id": "r2",
+          "builder": "b2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "declaration_occurrences_in_subtree": 2,
+          "non_source_issuers_in_subtree": [
+            "b2"
+          ],
+          "canonical_dfs": [
+            "r2",
+            "y1"
+          ],
+          "children": [
+            {
+              "kind": "node",
+              "declaration_id": "y1",
+              "builder": "b2",
+              "artifact_digest": "536c4c1ac011d97da0a5724c36601b6bb3a58de30d262f89f21896271eab575e",
+              "declaration_occurrences_in_subtree": 1,
+              "non_source_issuers_in_subtree": [],
+              "canonical_dfs": [
+                "y1"
+              ],
+              "children": [
+                {
+                  "kind": "leaf",
+                  "trusted_source": {
+                    "repo": "ci/Y",
+                    "commit": "c1"
+                  },
+                  "artifact_digest": "536c4c1ac011d97da0a5724c36601b6bb3a58de30d262f89f21896271eab575e"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "optimization": {
+        "total_declaration_occurrences": 4,
+        "first_tree_occurrences": 2,
+        "second_tree_occurrences": 2,
+        "canonical_dfs_sequence": [
+          [
+            "r1",
+            "x1"
+          ],
+          [
+            "r2",
+            "y1"
+          ]
+        ],
+        "pair_ordering": "两棵树按各自规范 DFS 声明 ID 序列字典序归一排序"
+      },
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 3,
+        "declaration_count": 4,
+        "issuer_count": 2,
+        "trusted_source_count": 2,
+        "eligible_declaration_count": 4,
+        "eligible_declaration_ids": [
+          "r1",
+          "r2",
+          "x1",
+          "y1"
+        ],
+        "revocation_total": 0,
+        "revocation_visible_count": 0,
+        "visible_revocations": [],
+        "root_proof_count_after_pruning": 2,
+        "proof_trees_enumerated_nodes": 6,
+        "root_proof_summaries": [
+          {
+            "occurrences": 2,
+            "non_source_issuers": [
+              "b1"
+            ],
+            "canonical_dfs": [
+              "r1",
+              "x1"
+            ]
+          },
+          {
+            "occurrences": 2,
+            "non_source_issuers": [
+              "b2"
+            ],
+            "canonical_dfs": [
+              "r2",
+              "y1"
+            ]
+          }
+        ],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "r1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r2",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "y1",
+            "eligible": true,
+            "reasons": []
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "E_small_set_but_longer_proof",
+      "status": "ok",
+      "selected": [
+        {
+          "kind": "node",
+          "declaration_id": "r1",
+          "builder": "b1",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "declaration_occurrences_in_subtree": 4,
+          "non_source_issuers_in_subtree": [
+            "b1"
+          ],
+          "canonical_dfs": [
+            "r1",
+            "x1",
+            "m1",
+            "l1"
+          ],
+          "children": [
+            {
+              "kind": "node",
+              "declaration_id": "x1",
+              "builder": "b1",
+              "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "declaration_occurrences_in_subtree": 3,
+              "non_source_issuers_in_subtree": [
+                "b1"
+              ],
+              "canonical_dfs": [
+                "x1",
+                "m1",
+                "l1"
+              ],
+              "children": [
+                {
+                  "kind": "node",
+                  "declaration_id": "m1",
+                  "builder": "b1",
+                  "artifact_digest": "9e6bb87ef59dff29376e63d5a849f17caef9ba2a93bc7fc924494ef666c486b0",
+                  "declaration_occurrences_in_subtree": 2,
+                  "non_source_issuers_in_subtree": [
+                    "b1"
+                  ],
+                  "canonical_dfs": [
+                    "m1",
+                    "l1"
+                  ],
+                  "children": [
+                    {
+                      "kind": "node",
+                      "declaration_id": "l1",
+                      "builder": "b9",
+                      "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+                      "declaration_occurrences_in_subtree": 1,
+                      "non_source_issuers_in_subtree": [],
+                      "canonical_dfs": [
+                        "l1"
+                      ],
+                      "children": [
+                        {
+                          "kind": "leaf",
+                          "trusted_source": {
+                            "repo": "ci/L",
+                            "commit": "c1"
+                          },
+                          "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "node",
+          "declaration_id": "r2",
+          "builder": "b2",
+          "artifact_digest": "2f1d50ff54dc1658849fb9e8f36ecb28fb39b0e14a05c42945a6494faa90f779",
+          "declaration_occurrences_in_subtree": 4,
+          "non_source_issuers_in_subtree": [
+            "b2",
+            "b3"
+          ],
+          "canonical_dfs": [
+            "r2",
+            "x2",
+            "q1",
+            "l1"
+          ],
+          "children": [
+            {
+              "kind": "node",
+              "declaration_id": "x2",
+              "builder": "b3",
+              "artifact_digest": "9c69785f9752df120833302e5fdb59ef705c47e25e9d5d646ef632d2c2529c29",
+              "declaration_occurrences_in_subtree": 3,
+              "non_source_issuers_in_subtree": [
+                "b3"
+              ],
+              "canonical_dfs": [
+                "x2",
+                "q1",
+                "l1"
+              ],
+              "children": [
+                {
+                  "kind": "node",
+                  "declaration_id": "q1",
+                  "builder": "b3",
+                  "artifact_digest": "2346b31dfc9b621eb572e2201217c3f7d16430ce1e2591e1dded1ada521730c0",
+                  "declaration_occurrences_in_subtree": 2,
+                  "non_source_issuers_in_subtree": [
+                    "b3"
+                  ],
+                  "canonical_dfs": [
+                    "q1",
+                    "l1"
+                  ],
+                  "children": [
+                    {
+                      "kind": "node",
+                      "declaration_id": "l1",
+                      "builder": "b9",
+                      "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f",
+                      "declaration_occurrences_in_subtree": 1,
+                      "non_source_issuers_in_subtree": [],
+                      "canonical_dfs": [
+                        "l1"
+                      ],
+                      "children": [
+                        {
+                          "kind": "leaf",
+                          "trusted_source": {
+                            "repo": "ci/L",
+                            "commit": "c1"
+                          },
+                          "artifact_digest": "02d2e723ea3eda5ea060565f7db407a6b169629fcc490788abe98ec0f803235f"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "optimization": {
+        "total_declaration_occurrences": 8,
+        "first_tree_occurrences": 4,
+        "second_tree_occurrences": 4,
+        "canonical_dfs_sequence": [
+          [
+            "r1",
+            "x1",
+            "m1",
+            "l1"
+          ],
+          [
+            "r2",
+            "x2",
+            "q1",
+            "l1"
+          ]
+        ],
+        "pair_ordering": "两棵树按各自规范 DFS 声明 ID 序列字典序归一排序"
+      },
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 5,
+        "declaration_count": 7,
+        "issuer_count": 4,
+        "trusted_source_count": 1,
+        "eligible_declaration_count": 7,
+        "eligible_declaration_ids": [
+          "l1",
+          "m1",
+          "q1",
+          "r1",
+          "r2",
+          "x1",
+          "x2"
+        ],
+        "revocation_total": 0,
+        "revocation_visible_count": 0,
+        "visible_revocations": [],
+        "root_proof_count_after_pruning": 4,
+        "proof_trees_enumerated_nodes": 12,
+        "root_proof_summaries": [
+          {
+            "occurrences": 4,
+            "non_source_issuers": [
+              "b1"
+            ],
+            "canonical_dfs": [
+              "r1",
+              "x1",
+              "m1",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 4,
+            "non_source_issuers": [
+              "b1",
+              "b3"
+            ],
+            "canonical_dfs": [
+              "r1",
+              "x2",
+              "q1",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 4,
+            "non_source_issuers": [
+              "b1",
+              "b2"
+            ],
+            "canonical_dfs": [
+              "r2",
+              "x1",
+              "m1",
+              "l1"
+            ]
+          },
+          {
+            "occurrences": 4,
+            "non_source_issuers": [
+              "b2",
+              "b3"
+            ],
+            "canonical_dfs": [
+              "r2",
+              "x2",
+              "q1",
+              "l1"
+            ]
+          }
+        ],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "l1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "m1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "q1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r2",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x2",
+            "eligible": true,
+            "reasons": []
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "F_authorization_boundaries",
+      "status": "fail",
+      "error_code": "NO_INDEPENDENT_PAIR",
+      "message": "存在完备证明，但任意两份的非源码签发者集合均不互斥",
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 1,
+        "declaration_count": 3,
+        "issuer_count": 3,
+        "trusted_source_count": 2,
+        "eligible_declaration_count": 1,
+        "eligible_declaration_ids": [
+          "r1"
+        ],
+        "revocation_total": 0,
+        "revocation_visible_count": 0,
+        "visible_revocations": [],
+        "root_proof_count_after_pruning": 1,
+        "proof_trees_enumerated_nodes": 2,
+        "root_proof_summaries": [
+          {
+            "occurrences": 1,
+            "non_source_issuers": [],
+            "canonical_dfs": [
+              "r1"
+            ]
+          }
+        ],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "r1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r2",
+            "eligible": false,
+            "reasons": [
+              "签发时间/仓库路径未命中左闭右开授权"
+            ]
+          },
+          {
+            "declaration_id": "r3",
+            "eligible": false,
+            "reasons": [
+              "签发时间/仓库路径未命中左闭右开授权"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "G_bad_signature_blocks_leaves",
+      "status": "fail",
+      "error_code": "NO_COMPLETE_PROOF",
+      "message": "根产物不存在可展开到可信源码的完备证明",
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 2,
+        "declaration_count": 3,
+        "issuer_count": 3,
+        "trusted_source_count": 1,
+        "eligible_declaration_count": 2,
+        "eligible_declaration_ids": [
+          "r1",
+          "r2"
+        ],
+        "revocation_total": 0,
+        "revocation_visible_count": 0,
+        "visible_revocations": [],
+        "root_proof_count_after_pruning": 0,
+        "proof_trees_enumerated_nodes": 0,
+        "root_proof_summaries": [],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "l1",
+            "eligible": false,
+            "reasons": [
+              "模拟验签失败"
+            ]
+          },
+          {
+            "declaration_id": "r1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r2",
+            "eligible": true,
+            "reasons": []
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "H_untrusted_leaf_rejected",
+      "status": "fail",
+      "error_code": "NO_COMPLETE_PROOF",
+      "message": "根产物不存在可展开到可信源码的完备证明",
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 2,
+        "declaration_count": 3,
+        "issuer_count": 3,
+        "trusted_source_count": 0,
+        "eligible_declaration_count": 2,
+        "eligible_declaration_ids": [
+          "r1",
+          "r2"
+        ],
+        "revocation_total": 0,
+        "revocation_visible_count": 0,
+        "visible_revocations": [],
+        "root_proof_count_after_pruning": 0,
+        "proof_trees_enumerated_nodes": 0,
+        "root_proof_summaries": [],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "l1",
+            "eligible": false,
+            "reasons": [
+              "叶子声明的源码不是外部预置可信源码"
+            ]
+          },
+          {
+            "declaration_id": "r1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "r2",
+            "eligible": true,
+            "reasons": []
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "I_sibling_choice_diversity",
+      "status": "fail",
+      "error_code": "NO_INDEPENDENT_PAIR",
+      "message": "存在完备证明，但任意两份的非源码签发者集合均不互斥",
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 3,
+        "declaration_count": 3,
+        "issuer_count": 3,
+        "trusted_source_count": 2,
+        "eligible_declaration_count": 3,
+        "eligible_declaration_ids": [
+          "r1",
+          "x1",
+          "y1"
+        ],
+        "revocation_total": 0,
+        "revocation_visible_count": 0,
+        "visible_revocations": [],
+        "root_proof_count_after_pruning": 1,
+        "proof_trees_enumerated_nodes": 5,
+        "root_proof_summaries": [
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b1"
+            ],
+            "canonical_dfs": [
+              "r1",
+              "x1",
+              "y1"
+            ]
+          }
+        ],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "r1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "y1",
+            "eligible": true,
+            "reasons": []
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "J_sibling_same_artifact_different_declarations",
+      "status": "fail",
+      "error_code": "NO_INDEPENDENT_PAIR",
+      "message": "存在完备证明，但任意两份的非源码签发者集合均不互斥",
+      "review": {
+        "limits": {
+          "max_artifacts": 30,
+          "max_declarations": 60,
+          "max_issuers": 12
+        },
+        "artifact_count": 2,
+        "declaration_count": 3,
+        "issuer_count": 3,
+        "trusted_source_count": 1,
+        "eligible_declaration_count": 3,
+        "eligible_declaration_ids": [
+          "r1",
+          "x1",
+          "x2"
+        ],
+        "revocation_total": 0,
+        "revocation_visible_count": 0,
+        "visible_revocations": [],
+        "root_proof_count_after_pruning": 1,
+        "proof_trees_enumerated_nodes": 5,
+        "root_proof_summaries": [
+          {
+            "occurrences": 3,
+            "non_source_issuers": [
+              "b1"
+            ],
+            "canonical_dfs": [
+              "r1",
+              "x1",
+              "x1"
+            ]
+          }
+        ],
+        "declaration_eligibility": [
+          {
+            "declaration_id": "r1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x1",
+            "eligible": true,
+            "reasons": []
+          },
+          {
+            "declaration_id": "x2",
+            "eligible": true,
+            "reasons": []
+          }
+        ]
+      }
+    }
+  ]
+}
